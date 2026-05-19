@@ -22,7 +22,7 @@ export function GetAllTodos(repo: TodoRepository) {
     todoLogger.debug({ page, limit }, "Listing todos");
     const todos = await repo.getAllTodos(page, limit);
     todoLogger.debug(
-      { page, limit, total: todos.total },
+      { page, limit, total: todos.total, data: todos.data },
       "Todos listed",
     );
 

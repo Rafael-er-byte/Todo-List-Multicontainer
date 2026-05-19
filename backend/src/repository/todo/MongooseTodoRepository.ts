@@ -7,7 +7,9 @@ import { TodoModel } from "../../model/TodoModel";
 import type { TodoRepository } from "./TodoRepository";
 
 function toTodo(todo: unknown): Todo {
-  return JSON.parse(JSON.stringify(todo)) as Todo;
+  const todoObj = JSON.parse(JSON.stringify(todo)) as Record<string, unknown>;
+  const {_id , ...rest} = todoObj
+  return {id: _id, ...rest} as Todo;
 }
 
 export function MongooseTodoRepository(): TodoRepository {

@@ -19,6 +19,9 @@ app.use(
 );
 app.use(express.json());
 app.use("/todos", TodoRoutes(MongooseTodoRepository()));
+app.use("/health", (req, res) => {
+    res.status(200).json({ status: "ok" });
+});
 
 const port = process.env.PORT || 3000;
 

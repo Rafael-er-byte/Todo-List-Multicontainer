@@ -1,5 +1,6 @@
 {
   "name": "Todo-List",
+  "packageManager": "pnpm@11.1.2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,7 +22,6 @@
   },
   "type": "module",
   "dependencies": {
-    "argon": "^2.0.21",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
@@ -39,8 +39,13 @@
     "@types/dotenv": "^8.2.3",
     "@types/express": "^5.0.6",
     "@types/node": "^25.8.0",
-    "@types/supertest": "^7.2.0",
+    "@types/pino-http": "^6.1.0",
     "nodemon": "^3.1.14",
     "tsx": "^4.22.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
