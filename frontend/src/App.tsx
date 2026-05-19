@@ -134,7 +134,6 @@ export default function App() {
   }
 
   async function toggleTodo(todo: Todo) {
-    console.log("Toggling todo with id:", todo);
     setBusyId(todo.id);
     setError(null);
 

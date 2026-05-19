@@ -64,7 +64,6 @@ export function createTodo(payload: TodoPayload) {
 }
 
 export function updateTodo(id: string, payload: Partial<TodoPayload>) {
-  console.log("Updating todo with id:", id, "and payload:", payload);
   return request<Todo>(`/todos/${id}`, {
     method: "PATCH",
     body: JSON.stringify(payload),
